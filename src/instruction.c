@@ -57,5 +57,6 @@ void I_hdr(inst_t inst , decoder_t *decoder){
 }
 
 inst_t inst_fetch(inst_t inst){
+    //todo
     return (inst_t)0x00110093;
 }

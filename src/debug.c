@@ -8,7 +8,7 @@ void p_gprs(){
         if(i%4 == 0 && i){
             printf("\n");
         }
-        printf("$%s = %.2d   ",gpr_name[i],gprs[i]);
+        printf("$%.5s = %5d   ",gpr_name[i],gprs[i]);
     }
     printf("\n-----------------\n");
     printf("$pc = %d ",pc);

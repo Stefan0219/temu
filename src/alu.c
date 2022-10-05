@@ -5,6 +5,7 @@
 #include "../include/errhdr.h"
 uint_32 aluoperation(alu_operand lhs,alu_operand rhs,alusel sel){
     uint_32 result = 0;
+    //todo
     switch (sel) {
         case 0:
             result = lhs + rhs;

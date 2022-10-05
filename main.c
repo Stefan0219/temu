@@ -18,7 +18,6 @@ int main(){
     gpr_w(2,10);
     printf("---mv x2, 10\n");
     printf("---addi x1,x2,1\n");
-   // p_vmem(0,8);
     cpu_exec(1);
     p_gprs();
 }

@@ -19,6 +19,7 @@ char *gpr_name[NGPR] = {
 uint_32 init_cpu(){
     printf("init cpu\n");
     pc = DEFAULTENTRY;
+    satp = 0;
     gprs[0] = 0;
 }
 uint_32 gpr_r(int_32 pos){

@@ -15,6 +15,9 @@ int main(){
     w_vmem(5,1);
     w_vmem(6,0);
     w_vmem(7,0);
+    gpr_w(2,10);
+    printf("---mv x2, 10\n");
+    printf("---addi x1,x2,1\n");
    // p_vmem(0,8);
     cpu_exec(1);
     p_gprs();

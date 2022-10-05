@@ -10,7 +10,7 @@
 #include "errhdr.h"
 extern uint_32 gprs[NGPR];
 extern char* gpr_name[NGPR];
-extern uint_64* PMEM;
+extern uint_8* PMEM;
 void p_gprs();
 void p_vmem(addr_t vaddr,uint_32 size);
 #endif //TEMU_DEBUG_H

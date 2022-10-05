@@ -13,6 +13,7 @@ void init_mem(){
     if(!PMEM)
         panic("init mem error");
 }
+//todo
 void w_pmem(addr_t paddr,uint_8 value){
     if(paddr >= PMEMSZ)
         panic("error in w_pmem!\n");
@@ -28,7 +29,7 @@ uint_8 r_vmem(addr_t vaddr){
     uint_32 pa = addr_trans(vaddr);
    return r_pmem(pa);
 }
-
+//todo
 uint_8 r_pmem(addr_t paddr){
     if(paddr>=PMEMSZ)
         panic("error in r_vmem!");

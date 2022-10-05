@@ -9,7 +9,7 @@ inst_hdr_t hdrs[] = {
 [TYPE_I] = I_hdr
 };
 void decode_exe(inst_t inst){
-    decoder_t *decoder =(decoder_t*) malloc(sizeof(decoder_t)) ;
+    decoder_t *decoder;
     decoder = fill_decoder(inst);
     hdrs[decoder->inst_type](inst,decoder);
 }
@@ -53,7 +53,7 @@ void I_hdr(inst_t inst , decoder_t *decoder){
     uint_32 imm = I_imm(inst);
     reg_t rs1val= gpr_r((int_32)decoder->rs1);
     uint_32 aluresult = aluoperation(rs1val,imm,decoder->funct3);
-    gpr_w((uint_32)decoder->rd,aluresult);
+    gpr_w((int_32)decoder->rd,aluresult);
 }
 
 inst_t inst_fetch(inst_t inst){

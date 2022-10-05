@@ -16,7 +16,7 @@ char *gpr_name[NGPR] = {
         "s8","s9","s10","s11",
         "t3","t4","t5","t6"
 };
-uint_32 init_cpu(){
+void init_cpu(){
     printf("init cpu\n");
     pc = DEFAULTENTRY;
     satp = 0;
@@ -37,6 +37,8 @@ void gpr_w(int_32 pos,uint_32 val){
 }
 
 void cpu_exec(uint_32 step){
-    inst_t inst = inst_fetch(pc);
-    decode_exe(inst);
+    for (int i = 0; i < step; ++i) {
+        inst_t inst = inst_fetch(pc);
+        decode_exe(inst);
+    }
 }

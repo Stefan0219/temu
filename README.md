@@ -3,4 +3,4 @@
 * Still updating.
 * Enjoy it if you find this repo.
 * Special thanks to jyy,yzh,byg.
-* Some ideas comes from nemu,xv6.
+* Some ideas come from nemu,xv6.

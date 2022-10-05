@@ -10,10 +10,12 @@ void p_gprs(){
         }
         printf("$%s = %d ",gpr_name[i],gprs[i]);
     }
+    printf("\n-----------------\n");
+    printf("$pc = %d ",pc);
 }
 
 void p_vmem(addr_t vaddr,uint_32 size){
-    for (int i = vaddr; i < size; ++i) {
+    for (int i = (int)vaddr; i < size; ++i) {
         if(i && !(i%8) )
             printf("\n");
         printf("%x ", r_vmem(i));

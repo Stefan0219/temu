@@ -7,8 +7,15 @@
 int main(){
     init_cpu();
     init_mem();
-    w_vmem(0,0xa);
-    w_vmem(0x5,0xf);
-    w_vmem(0x6,0xd);
-    p_vmem(0,20);
+    w_vmem(0,3);
+    w_vmem(1,9);
+    w_vmem(2,0);
+    w_vmem(3,0);
+    w_vmem(4,1);
+    w_vmem(5,1);
+    w_vmem(6,0);
+    w_vmem(7,0);
+   // p_vmem(0,8);
+    cpu_exec(1);
+    p_gprs();
 }

@@ -7,11 +7,15 @@
 #define uint_64 unsigned long long
 #define uint_8 char
 #define uint_32 unsigned int
-#define addr_t uint_32
 #define int_64 long long
 #define int_32 int
+#define addr_t uint_32
+#define inst_t uint_32
+#define alu_operand uint_32
+#define alusel uint_32
+#define reg_t uint_32
 #include <stdbool.h>
-
+#define ARRLEN(arr) (uint_32) sizeof(arr)/sizeof(arr[0])
 
 
 

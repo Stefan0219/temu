@@ -18,6 +18,7 @@ char *gpr_name[NGPR] = {
 };
 uint_32 init_cpu(){
     printf("init cpu\n");
+    pc = DEFAULTENTRY;
     gprs[0] = 0;
 }
 uint_32 gpr_r(int_32 pos){
@@ -32,4 +33,9 @@ void gpr_w(int_32 pos,uint_32 val){
     if(pos>=NGPR || pos < 0)
         panic("error in writing reg file");
     gprs[pos] = val;
+}
+
+void cpu_exec(uint_32 step){
+    inst_t inst = inst_fetch(pc);
+    decode_exe(inst);
 }
